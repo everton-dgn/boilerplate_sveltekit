@@ -6,7 +6,6 @@ import prettier from 'eslint-config-prettier'
 import ts from 'typescript-eslint'
 import svelteParser from 'svelte-eslint-parser'
 import intlifySvelte from '@intlify/eslint-plugin-svelte'
-import sonarjs from 'eslint-plugin-sonarjs'
 import pluginPromise from 'eslint-plugin-promise'
 import playwright from 'eslint-plugin-playwright'
 
@@ -45,7 +44,6 @@ export default ts.config(
   ...svelte.configs['flat/prettier'],
   ...intlifySvelte.configs['flat/recommended'],
   pluginPromise.configs['flat/recommended'],
-  sonarjs.configs.recommended,
   {
     languageOptions: {
       globals: {
@@ -59,9 +57,7 @@ export default ts.config(
       'no-unused-vars': 'warn',
       'no-debugger': 'error',
       'no-duplicate-imports': 'error',
-      'sonarjs/no-commented-code': 'off',
       '@typescript-eslint/array-type': 'off',
-      'sonarjs/no-duplicate-string': 'off',
       'no-undef': 'off',
       '@typescript-eslint/no-misused-promises': 'off',
       '@typescript-eslint/no-confusing-void-expression': 'off',
