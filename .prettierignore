@@ -1,0 +1,10 @@
+pnpm-lock.yaml
+static
+e2e
+.svelte-kit
+node_modules
+.idea
+.vercel
+tsconfig.tsbuildinfo
+.gitignore
+.eslintcache
