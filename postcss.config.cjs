@@ -8,9 +8,9 @@ module.exports = {
       stage: 3,
       autoprefixer: {},
       features: {
-        'custom-properties': false,
+        'custom-properties': false
       }
     },
-    ...(IS_PRODUCTION ? {cssnano: {}} : {})
+    ...(IS_PRODUCTION ? { cssnano: {} } : {})
   }
 }
