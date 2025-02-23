@@ -103,7 +103,9 @@ export default ts.config(
       'svelte/no-reactive-reassign': 'error',
       'svelte/no-store-async': 'error',
       'svelte/require-each-key': 'error',
-      '@intlify/svelte/no-raw-text': 'off'
+      '@intlify/svelte/no-raw-text': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off'
     }
   },
   {
