@@ -1,9 +1,10 @@
 <script lang="ts">
-  export const abc: number = 32
+  import { counter } from './state.svelte'
+  import S from './styles.module.css'
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read
-  the documentation {abc}
-</p>
+<main>
+  <h1 class={S.title}>Contador: {counter.count} - {counter.doubleCount()}</h1>
+  <button onclick={() => counter.increment()}>Incrementar</button>
+  <button onclick={() => counter.decrement()}>Decrementar</button>
+</main>
