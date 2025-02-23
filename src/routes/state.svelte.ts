@@ -1,20 +1,24 @@
 type Counter = {
-  getCount: () => number
-  getDoubleCount: () => number
+  getCount: number
+  getDoubleCount: number
   setIncrement: () => void
   setDecrement: () => void
 }
 
-export const useCounter = (): Counter => {
-  let count = $state<number>(0)
+let count = $state<number>(0)
 
-  const getCount = () => count
+const doubleCount = $derived(count * 2)
 
-  const getDoubleCount = () => count * 2
+export const useCounter = (): Counter => ({
+  get getCount() {
+    return count
+  },
 
-  const setIncrement = () => count++
+  get getDoubleCount() {
+    return doubleCount
+  },
 
-  const setDecrement = () => count--
+  setIncrement: () => count++,
 
-  return { getCount, getDoubleCount, setIncrement, setDecrement }
-}
+  setDecrement: () => count--
+})
