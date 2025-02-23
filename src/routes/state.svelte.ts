@@ -1,24 +1,20 @@
-interface ICounter {
-  count: number
-  increment(): void
-  decrement(): void
-  doubleCount(): number
+type Counter = {
+  getCount: () => number
+  getDoubleCount: () => number
+  setIncrement: () => void
+  setDecrement: () => void
 }
 
-class Counter implements ICounter {
-  count = $state<number>(0)
+export const useCounter = (): Counter => {
+  let count = $state<number>(0)
 
-  increment() {
-    this.count++
-  }
+  const getCount = () => count
 
-  decrement() {
-    this.count--
-  }
+  const getDoubleCount = () => count * 2
 
-  doubleCount(): number {
-    return this.count * 2
-  }
+  const setIncrement = () => count++
+
+  const setDecrement = () => count--
+
+  return { getCount, getDoubleCount, setIncrement, setDecrement }
 }
-
-export const counter = new Counter()
