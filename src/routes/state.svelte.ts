@@ -9,7 +9,7 @@ let count = $state<number>(0)
 
 const doubleCount = $derived(count * 2)
 
-export const useCounter = (): Counter => ({
+const useCounter = (): Counter => ({
   get getCount() {
     return count
   },
@@ -22,3 +22,5 @@ export const useCounter = (): Counter => ({
 
   setDecrement: () => count--
 })
+
+export const counter = useCounter()

@@ -1,8 +1,6 @@
 <script lang="ts">
-  import { useCounter } from './state.svelte'
+  import { counter } from './state.svelte'
   import S from './styles.module.css'
-
-  const counter = useCounter()
 </script>
 
 <main>
