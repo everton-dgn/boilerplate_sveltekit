@@ -7,7 +7,7 @@ type Counter = {
 
 let count = $state<number>(0)
 
-const doubleCount = $derived(count * 2)
+const doubleCount: number = $derived(count * 2)
 
 const useCounter = (): Counter => ({
   get getCount() {
