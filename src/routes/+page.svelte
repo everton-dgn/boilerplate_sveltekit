@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { counter } from './state.svelte'
+  import { counterState } from './state.svelte'
   import S from './styles.module.css'
 </script>
 
 <main>
   <h1 class={S.title}>
-    Contador: {counter.getCount} - {counter.getDoubleCount}
+    Contador: {counterState.getCount} - {counterState.getDoubleCount}
   </h1>
-  <button onclick={counter.setIncrement}>Incrementar</button>
-  <button onclick={counter.setDecrement}>Decrementar</button>
+  <button onclick={counterState.setIncrement}>Incrementar</button>
+  <button onclick={counterState.setDecrement}>Decrementar</button>
 </main>
