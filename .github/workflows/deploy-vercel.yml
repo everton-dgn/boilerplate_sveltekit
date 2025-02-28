@@ -36,6 +36,14 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
+      #  check:
+      - name: Run Check
+        run: pnpm check
+
+      #  typecheck:
+      - name: Run Typescript Check
+        run: pnpm typecheck
+
       #  lint:
       - name: Run Lint
         run: pnpm lint
