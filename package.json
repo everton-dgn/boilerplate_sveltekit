@@ -6,7 +6,6 @@
   "author": "Éverton Toffanetto",
   "description": "This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.",
   "repository": "https://github.com/everton-dgn/boilerplate_sveltekit",
-  "type": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -28,6 +27,10 @@
     "update:pnpm": "corepack use pnpm@latest",
     "detect:duplicates": "pnpx jscpd ./src/**/*.ts",
     "postinstall": "pnpx lefthook install"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
