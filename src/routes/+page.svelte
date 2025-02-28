@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { counterState } from './state.svelte'
+  import { counterState } from '@/store/counter.svelte'
   import { preventDefaultAction } from '@/actions/preventDefaultAction.svelte'
   import S from './styles.module.css'
 </script>
