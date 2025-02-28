@@ -38,7 +38,7 @@ jobs:
 
       #  lint:
       - name: Run Lint
-        run: yarn lint
+        run: pnpm lint
 
       #  test_ci:
       - name: Run Tests
