@@ -29,15 +29,24 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
+      # config cache
+      - name: Cache Playwright Browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
       #  install_dependencies:
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: NODE_ENV=ci pnpm install --frozen-lockfile --prefer-offline
 
       - name: Install Playwright Browsers
         run: pnpm playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: pnpm playwright test
+      - name: Start server and run tests
+        run: pnpm exec start-server-and-test 'pnpm dev' $BASE_URL_TEST 'pnpm playwright test'
 
       - uses: actions/upload-artifact@v4
         if: always()
