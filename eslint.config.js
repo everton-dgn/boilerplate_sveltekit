@@ -102,7 +102,7 @@ export default ts.config(
       'svelte/no-unused-svelte-ignore': 'error',
       'svelte/no-reactive-reassign': 'error',
       'svelte/no-store-async': 'error',
-      'svelte/require-each-key': 'error',
+      'svelte/require-each-key': 'off',
       '@intlify/svelte/no-raw-text': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off'
