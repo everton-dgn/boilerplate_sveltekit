@@ -23,7 +23,7 @@
     "test:ci": "vitest run related",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:codegen": "playwright codegen http://localhost:4321",
+    "test:e2e:codegen": "playwright codegen http://localhost:5173",
     "check:update": "pnpm update --interactive --latest",
     "update:pnpm": "corepack use pnpm@latest",
     "detect:duplicates": "pnpx jscpd ./src/**/*.ts",
