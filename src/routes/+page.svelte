@@ -1,16 +1,21 @@
 <script lang="ts">
-  import { counterState } from '@/store/counter.svelte'
-  import { preventDefaultAction } from '@/actions/preventDefaultAction.svelte'
+  import CounterButton from '@/components/atoms/CounterButton/CounterButton.svelte'
 
   import S from './styles.module.css'
 </script>
 
-<main>
-  <h1 class={S.title}>
-    Contador: {counterState.getCount} - {counterState.getDoubleCount}
-  </h1>
-  <button use:preventDefaultAction={counterState.setIncrement}>
-    Incrementar
-  </button>
-  <button onclick={counterState.setDecrement}>Decrementar</button>
-</main>
+<div class={S.container}>
+  <header class={S.header}>Boilerplate</header>
+  <main class={S.main}>
+    <div class={S.wrapper_images}>
+      <img
+        src="/images/logo_sveltekit.svg"
+        alt="Logo Sveltekit"
+        width={87}
+        height={87}
+      />
+    </div>
+    <h1 class={S.title}>Sveltekit</h1>
+    <CounterButton />
+  </main>
+</div>
