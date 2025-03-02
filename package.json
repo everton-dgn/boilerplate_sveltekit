@@ -7,7 +7,7 @@
   "description": "This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.",
   "repository": "https://github.com/everton-dgn/boilerplate_sveltekit",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --port 4173",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -23,7 +23,7 @@
     "test:ci": "vitest run related",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:codegen": "playwright codegen http://localhost:5173",
+    "test:e2e:codegen": "playwright codegen http://localhost:4173",
     "check:update": "pnpm update --interactive --latest",
     "update:pnpm": "corepack use pnpm@latest",
     "detect:duplicates": "pnpx jscpd ./src/**/*.ts",
