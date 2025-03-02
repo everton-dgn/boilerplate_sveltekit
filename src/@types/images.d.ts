@@ -1,3 +1,5 @@
+declare module '*.svg?raw'
+
 declare module '*.svg'
 
 declare module '*.jpg'

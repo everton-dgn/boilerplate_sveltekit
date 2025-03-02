@@ -97,7 +97,7 @@ export default ts.config(
     },
     rules: {
       ...svelte.configs['flat/recommended'].rules,
-      'svelte/no-at-html-tags': 'error',
+      'svelte/no-at-html-tags': 'off',
       'svelte/valid-compile': 'error',
       'svelte/no-unused-svelte-ignore': 'error',
       'svelte/no-reactive-reassign': 'error',
