@@ -12,10 +12,8 @@
 <div class={S.container}>
   <header class={S.header}>Boilerplate</header>
   <main class={S.main}>
-    <div class={S.wrapper_images}>
-      <div class={S.logo}>
-        {@html Logo}
-      </div>
+    <div class={S.logo}>
+      {@html Logo}
     </div>
     <h1 class={S.title}>Sveltekit</h1>
     <CounterButton />
