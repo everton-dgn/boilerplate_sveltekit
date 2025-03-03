@@ -6,11 +6,43 @@
 </script>
 
 <main>
-  <h1 class={S.title}>
-    Contador: {counterState.getCount} - {counterState.getDoubleCount}
-  </h1>
-  <button use:preventDefaultAction={counterState.setIncrement}>
-    Incrementar
-  </button>
-  <button onclick={counterState.setDecrement}>Decrementar</button>
+  <h1>Home</h1>
+  <p>this is the Home page.</p>
+  <div class={S.description}>
+    <p>
+      Contador: {counterState.getCount} and {counterState.getDoubleCount}
+    </p>
+    <button use:preventDefaultAction={counterState.setIncrement}>
+      Incrementar
+    </button>
+    <button onclick={counterState.setDecrement}>Decrementar</button>
+  </div>
 </main>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+</style>
