@@ -105,8 +105,7 @@ export default ts.config(
       'svelte/require-each-key': 'off',
       '@intlify/svelte/no-raw-text': 'off',
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'svelte/no-useless-children-snippet': 'off'
+      '@typescript-eslint/no-unused-vars': 'off'
     }
   },
   {

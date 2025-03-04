@@ -5,10 +5,12 @@
   import '@/theme/reset.css'
 
   import MainProvider from '@/components/providers/MainProvider.svelte'
+
+  import type { Props } from '@/routes/types'
+
+  let { children }: Props = $props()
 </script>
 
 <MainProvider>
-  {#snippet children()}
-    <slot />
-  {/snippet}
+  {@render children()}
 </MainProvider>
