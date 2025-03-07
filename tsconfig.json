@@ -28,7 +28,7 @@
     "skipLibCheck": true,
     "incremental": true,
     "checkJs": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "@sveltejs/kit"]
   },
   "include": [
     "src/**/*.ts",
