@@ -1,7 +1,7 @@
 <script lang="ts">
-  import CounterButton from '@/components/atoms/CounterButton/CounterButton.svelte'
-  import Logo from '@/assets/logo_sveltekit.svg?raw'
-  import S from './styles.module.css'
+import Logo from '@/assets/logo_sveltekit.svg?raw'
+import CounterButton from '@/components/atoms/CounterButton/CounterButton.svelte'
+import S from './styles.module.css'
 </script>
 
 <svelte:head>
