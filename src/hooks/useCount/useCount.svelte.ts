@@ -1,9 +1,11 @@
-let count = $state(0)
+export const useCount = () => {
+  let count = $state(0)
 
-export const useCount = () => ({
-  get getCount() {
-    return count
-  },
+  return {
+    get getCount() {
+      return count
+    },
 
-  setIncrement: () => count++
-})
+    setIncrement: () => count++
+  }
+}
