@@ -20,9 +20,9 @@ export default defineConfig({
     globals: true,
     passWithNoTests: true,
     clearMocks: true,
-    include: ['src/**/*.test.ts'],
-    exclude: ['**/playwright/**'],
-    setupFiles: ['./vitest-setup-client.ts']
+    include: ['src/**/__tests__/*.test.ts'],
+    exclude: ['**/node_modules/**', '**/playwright/**'],
+    setupFiles: ['./vitest.setup.ts']
   },
   resolve: {
     conditions: ['development', 'browser']
