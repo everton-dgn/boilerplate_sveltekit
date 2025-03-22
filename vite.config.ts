@@ -9,7 +9,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/**/*.{ts,svelte}'],
-      exclude: ['node_modules/']
+      exclude: ['src/assets/', 'src/tests/']
     },
     pool: 'forks',
     poolOptions: {
